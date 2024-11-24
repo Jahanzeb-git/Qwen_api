@@ -1,32 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "main.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxDuration": 15,  // Maximum function execution time (in seconds)
-          "memory": 512  // Memory allocated for the function (in MB)
-        }
-      }
-    ],
-    "env": {
-      "API_KEY_USER1": "@API_KEY_USER1",
-      "API_KEY_USER2": "@API_KEY_USER2",
-      "API_KEY_USER3": "@API_KEY_USER3",
-      "API_KEY_USER4": "@API_KEY_USER4",
-      "API_KEY_USER5": "@API_KEY_USER5",
-      "API_KEY_USER6": "@API_KEY_USER6",
-      "API_KEY_USER7": "@API_KEY_USER7",
-      "API_KEY_USER8": "@API_KEY_USER8",
-      "API_KEY_USER9": "@API_KEY_USER9",
-      "API_KEY_USER10": "@API_KEY_USER10"
-    },
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "main.py"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "main.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "env": {
+    "API_KEY_USER1": "@API_KEY_USER1",
+    "API_KEY_USER2": "@API_KEY_USER2",
+    "API_KEY_USER3": "@API_KEY_USER3",
+    "API_KEY_USER4": "@API_KEY_USER4",
+    "API_KEY_USER5": "@API_KEY_USER5",
+    "API_KEY_USER6": "@API_KEY_USER6",
+    "API_KEY_USER7": "@API_KEY_USER7",
+    "API_KEY_USER8": "@API_KEY_USER8",
+    "API_KEY_USER9": "@API_KEY_USER9",
+    "API_KEY_USER10": "@API_KEY_USER10"
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "main.py"
+    }
+  ]
+}
