@@ -1,76 +1,65 @@
-Project Title: FastAPI-Powered AI Chatbot with API Key Management and Rate Limiting
-Overview
-This project is a FastAPI-based application that provides an AI-powered chatbot using Hugging Face's inference API. The application includes features for managing API keys, rate-limiting requests, and handling user interactions securely. It is designed for developers looking to integrate AI chatbot functionality into their applications with robust access control mechanisms.
+# **FineTuned AI Chatbot with API Key Management and Rate Limiting**
 
-Features
-AI-Powered Chatbot:
+## **Overview**
+This project is a FastAPI-based application that provides an FinedTuned AI-powered chatbot. It includes robust features such as API key management, rate-limiting, error handling, and secure storage of sensitive data. Designed for developers, this project enables easy integration of AI chatbot functionality into applications while maintaining strict access control. It uses **Qwen3.2**, which use Architecture of transformers with RoPE, SwiGLU, RMSNorm, and Attention QKV bias with **38 Billion** Parametric Tokenization and support Context Length of Full **131,072** tokens.
 
-Leverages Hugging Face's InferenceClient to provide AI-driven responses.
-Pre-configured with a system prompt to act as a knowledgeable assistant for data science, AI, and general knowledge.
-API Key Management:
+---
 
-Generates unique, one-time API keys for users.
-Tracks used API keys to prevent reuse and unauthorized access.
-Prevents multiple API key generation requests from the same IP address.
-Rate Limiting:
+## **Features**
 
-Limits the number of requests per IP address (e.g., 100 requests/day and 20 requests/minute) using slowapi.
-Error Handling and Logging:
+### **1. AI-Powered Chatbot**
+- Utilizes Fine Tuned HuggingFace Inference API to deliver AI-generated responses.
+- Pre-configured with a **system prompt** to act as a knowledgeable assistant, specializing in data science, AI, and general knowledge.
 
-Captures and logs errors related to HTTP requests, API key usage, and server exceptions.
-Logs stored in app.log for debugging and monitoring.
-Secure Environment:
+### **2. API Key Management**
+- Generates unique, one-time API keys for each user.
+- Tracks and prevents the reuse of API keys.
+- Restricts multiple API key generation requests from the same IP address.
 
-Uses .env files to store sensitive information like API keys.
-Ensures sensitive files are ignored using .gitignore.
+### **3. Rate Limiting**
+- Limits the number of requests per IP address using `slowapi`.
+- Configured limits:
+  - **100 requests/day** per IP.
+  - **20 requests/minute** per IP.
+
+### **4. Error Handling and Logging**
+- Captures and logs:
+  - HTTP request errors.
+  - Invalid API key usage.
+  - Unexpected server exceptions.
+- Logs are stored in `app.log` for debugging and monitoring.
+
+### **5. Secure Environment**
+- Sensitive information, such as API keys, is stored in a `.env` file.
+- `.gitignore` ensures `.env` and other sensitive files are excluded from version control.
+
+---
+
+## **API Endpoints**
+
+### **1. Generate API Key**
+- **URL:** `/generate_api`
+- **Method:** `GET`
+- **Description:** Generates a one-time API key for the requesting user based on their IP address.
+
+### **2. Generate Response**
+- **URL:** `/response
+- **Method:** `GET`
+- **Description:** Generates Response as Per systemprompt and Systemprompt context.
 
 
-API Endpoints
-1. Generate API Key
-URL: /generate_api
-Method: GET
-Description: Generates a one-time API key for users based on their IP address.
-
-Response Example:
-
-json
-Copy code
+#### **Response Example for API key Generation**
+```json
 {
     "One Time API key": "1a2b3C4d5E6f7G8h9I0J1K2L3M4N5O6",
     "Generation Time": "2024-11-23 15:45:00",
     "!": "Don't share this secret API key."
 }
-2. Generate AI Response
-URL: /response
-Method: POST
-Headers:
 
-x-api-key: User's API key
-Body:
-
-json
-Copy code
+#### **Input Format**
+```json
 {
-    "system_prompt": "You are a helpful assistant.",
-    "message": "What is the capital of France?",
-    "tokens": 100
+    "system_prompt": "You are Machine learning Engineer, write your response in 100 words.",
+    "message": "What is Linear Regression?",
+    "tokens": 200
 }
-Response Example:
-
-json
-Copy code
-{
-    "role": "assistant",
-    "content": "The capital of France is Paris."
-}
-Rate Limiting:
-
-Maximum of 100 requests per day per IP.
-Maximum of 20 requests per minute per IP.
-
-
-Contact
-For issues or inquiries, please reach out to:
-Jahanzeb Ahmed
-Email: jahanzebahmed.mail@gmail.com
-GitHub: jahanzeb-git
