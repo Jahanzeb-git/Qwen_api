@@ -17,18 +17,18 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.state.limiter = limiter
 
 
-# Access API keys
+# Direct API keys (hardcoded)
 API_KEYS = {
-    "user1": os.getenv("API_KEY_USER1"),
-    "user2": os.getenv("API_KEY_USER2"),
-    "user3": os.getenv("API_KEY_USER3"),
-    "user4": os.getenv("API_KEY_USER4"),
-    "user5": os.getenv("API_KEY_USER5"),
-    "user6": os.getenv("API_KEY_USER6"),
-    "user7": os.getenv("API_KEY_USER7"),
-    "user8": os.getenv("API_KEY_USER8"),
-    "user9": os.getenv("API_KEY_USER9"),
-    "user10": os.getenv("API_KEY_USER10"),
+    "user1": "1a2b3C4d5E6f7G8h9I0J1K2L3M4N5O6",
+    "user2": "7z8Y9A0B1C2D3E4F5G6H7I8J9K0L1M2",
+    "user3": "9X1Y2Z3A4B5C6D7E8F9G0H1I2J3K4L5",
+    "user4": "A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5",
+    "user5": "F1g2H3i4J5K6l7M8n9O0p1q2r3S4T5",
+    "user6": "U1V2W3X4Y5Z6A7B8C9D0E1F2G3H4I5",
+    "user7": "P1Q2R3S4T5U6V7W8X9Y0Z1A2B3C4D5",
+    "user8": "M1N2O3P4Q5R6S7T8U9V0W1X2Y3Z4A5",
+    "user9": "B1C2D3E4F5G6H7I8J9K0L1M2N3O4P5",
+    "user10": "Q1R2S3T4U5V6W7X8Y9Z0A1B2C3D4E5"
 }
 
 # Set up logging configuration (log only to a file)
