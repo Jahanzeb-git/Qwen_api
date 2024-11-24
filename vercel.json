@@ -3,17 +3,20 @@
     "builds": [
       {
         "src": "main.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxDuration": 15
-        }
+        "use": "@vercel/python"
       }
     ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "main.py"
-      }
-    ]
+    "env": {
+      "API_KEY_USER1": "@API_KEY_USER1",
+      "API_KEY_USER2": "@API_KEY_USER2",
+      "API_KEY_USER3": "@API_KEY_USER3",
+      "API_KEY_USER4": "@API_KEY_USER4",
+      "API_KEY_USER5": "@API_KEY_USER5",
+      "API_KEY_USER6": "@API_KEY_USER6",
+      "API_KEY_USER7": "@API_KEY_USER7",
+      "API_KEY_USER8": "@API_KEY_USER8",
+      "API_KEY_USER9": "@API_KEY_USER9",
+      "API_KEY_USER10": "@API_KEY_USER10"
+    }
   }
   
