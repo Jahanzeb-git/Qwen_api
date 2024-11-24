@@ -50,3 +50,8 @@
 2024-11-24 00:20:22,675 - DEBUG - https://api-inference.huggingface.co:443 "POST /models/Qwen/Qwen2.5-Coder-32B-Instruct/v1/chat/completions HTTP/11" 200 None
 2024-11-24 00:20:22,677 - INFO - Received response: ChatCompletionOutputMessage(role='assistant', content='Linear Regression is a fundamental supervised machine learning algorithm used to model the relationship between a dependent variable and one or more independent variables. It assumes a linear relationship between these variables, expressed by a linear equation. In its simplest form, which is Simple Linear Regression, the relationship is modeled by a straight line. Multiple Linear Regression extends this by modeling the relationship using a hyperplane in multi-dimensional space. The goal is to find the best-fitting line or hyperplane that minimizes the sum of the squared differences between the observed and predicted values, often using techniques like the Ordinary Least Squares method.', tool_calls=None)
 2024-11-24 00:20:22,677 - INFO - Model response generated successfully for 127.0.0.1
+2024-11-24 22:11:45,352 - INFO - API key generated for IP: 127.0.0.1 at 2024-11-24 22:11:45
+2024-11-24 22:12:07,846 - WARNING - API key already generated for IP: 127.0.0.1 at 2024-11-24 22:11:45
+2024-11-24 22:12:07,846 - ERROR - HTTP exception occurred: 
+2024-11-24 22:12:11,465 - WARNING - API key already generated for IP: 127.0.0.1 at 2024-11-24 22:11:45
+2024-11-24 22:12:11,465 - ERROR - HTTP exception occurred: 

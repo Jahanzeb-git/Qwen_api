@@ -6,7 +6,6 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from datetime import datetime
 from script import Run
-from dotenv import load_dotenv
 import os
 
 # Set up FastAPI application
@@ -17,8 +16,6 @@ limiter = Limiter(key_func=get_remote_address)
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.state.limiter = limiter
 
-# Load environment variables from .env file
-load_dotenv()
 
 # Access API keys
 API_KEYS = {
