@@ -55,3 +55,6 @@
 2024-11-24 22:12:07,846 - ERROR - HTTP exception occurred: 
 2024-11-24 22:12:11,465 - WARNING - API key already generated for IP: 127.0.0.1 at 2024-11-24 22:11:45
 2024-11-24 22:12:11,465 - ERROR - HTTP exception occurred: 
+2024-11-24 23:06:35,787 - INFO - API key generated for IP: 127.0.0.1 at 2024-11-24 23:06:35
+2024-11-24 23:06:39,026 - WARNING - API key already generated for IP: 127.0.0.1 at 2024-11-24 23:06:35
+2024-11-24 23:06:39,026 - ERROR - HTTP exception occurred: 
